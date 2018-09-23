@@ -1,0 +1,434 @@
+/*.navbar-default{
+	background-color: rgb(21,140,186);
+	border-color: #0176a3;
+	border-radius: 0;
+}
+
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	color: #cce8ff;	
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-size: 1.5rem;
+}*/
+
+
+/* =================================	CUSTOM CSS	================================= */
+
+.no-underline{
+	text-decoration: none !important;
+}
+
+select{
+	font-family: 'FontAwesome', 'Sans-serif';
+}
+
+.center-form{
+	float: none;
+	margin: 0 auto;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+ul.bigger-width{
+	width: 250px !important;
+}
+
+.new-post-form .form-error p{
+	margin: 0 0 0 .2rem;
+}
+
+.new-post-form h2{
+	margin-bottom: 2rem;
+}
+
+.error-input{
+	color: red;
+	padding-bottom: .5rem;
+	font-size: 1.4rem;
+}
+
+
+.title-hr{
+	width: 75%;
+}
+
+.content table{
+	display: table !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+	border-color: gray !important;
+}
+
+.content tbody{
+	display: table-row-group !important;
+vertical-align: middle !important;
+border-color: inherit !important;
+}
+
+.content td{
+		display: table-cell !important;
+		border-color: inherit !important;
+vertical-align: inherit !important;
+}
+
+.content tfoot{
+	display: table-footer-group !important;
+vertical-align: middle !important;
+border-color: inherit !important;
+}
+
+.content th{
+	display: table-cell !important;
+vertical-align: inherit !important;
+font-weight: bold !important;
+text-align: center !important;
+border-color: inherit !important; 
+}
+
+.content thead{
+	display: table-header-group !important;
+vertical-align: middle !important;
+border-color: inherit !important;
+}
+
+.content tr{
+		display: table-row !important;
+vertical-align: inherit !important;
+border-color: inherit !important;
+}
+
+#footer{
+	background-color: #f8f8f8;
+	/*background-image: inherit;*/
+	color: black;
+	border-top: 3px solid #e7e7e7;
+	padding: 2rem 0;
+	text-align: center;
+	margin-top: 10rem;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+#footer .row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.logo{
+	height: 100px;
+	width: 250px;
+}
+
+.logo:hover{
+	opacity: .75;
+}
+
+.modal h4{
+  color: black !important;
+  text-transform: none !important; 
+  margin-bottom: 0px !important;
+  font-size: 20px !important;
+}
+
+.modal{
+  margin-top: 30vh;
+}
+
+.categories li:hover{
+	background-color: #f9f9f9;
+}
+
+.active-dropdown, .active-dropdown:hover, .active-dropdown:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    outline: 0 !important;
+    background-color: #158cba !important;
+}
+
+.category-delete{
+	color: red;
+	cursor: pointer;
+}
+
+.category-delete:hover{
+	color: #c40101;
+	text-decoration: none;
+}
+
+li.current a{
+	color: red;
+}
+
+li.current a:hover{
+	color: red;
+}
+
+.pagination-div{
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* =================================	CUSTOM CSS	================================= */
+
+/* =================================	SIDEBAR	================================= */
+
+.mini-submenu, .mini-submenu2, .mini-submenu3{
+  display:none;  
+  background-color: rgba(0, 0, 0, 0);  
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 9px;  
+  /*position: relative;*/
+  width: 42px;
+	margin-bottom: 1rem;
+}
+
+.mini-submenu:hover, .mini-submenu2:hover, .mini-submenu3:hover{
+  cursor: pointer;
+}
+
+.mini-submenu .icon-bar, .mini-submenu2 .icon-bar, .mini-submenu3 .icon-bar{
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin-top: 3px;
+}
+
+.mini-submenu .icon-bar, .mini-submenu2 .icon-bar, .mini-submenu3 .icon-bar{
+  background-color: #000;
+}
+
+#slide-submenu, #slide-submenu2, #slide-submenu3{
+  background: rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: -3px;
+}
+
+.sidebar{
+	margin-top: 2.5rem;
+}
+
+.sidebar-ul{
+    background-color: #fff;
+    margin-left: -1rem;
+}
+
+.sidebar-li a{
+    text-decoration: none;
+}
+
+.sidebar li a:hover{
+    text-decoration: underline;
+}
+
+.underline:hover{
+    text-decoration: underline !important;
+}
+
+.panel-body{
+    border: 1px solid #f4f4f4;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.fa-arrow-right:before{
+	font-weight: 100;
+	font-size: 12px;
+}
+
+/* =================================	SIDEBAR	================================= */
+
+
+/* =================================	CARD	================================= */
+
+section .section-title{
+	text-align:center;
+	color: rgb(21,140,186);
+	text-transform:uppercase;
+}
+#what-we-do{
+	background:#ffffff;
+}
+#what-we-do .card{
+	padding: 1rem!important;
+	background-color: #fff;
+	border: none;
+	margin-bottom: 2rem;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#what-we-do .card{
+	-webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+	-moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+	box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+#what-we-do .card .card-block{
+	padding-left: 50px;
+    position: relative;
+}
+#what-we-do .card .card-block a{
+	color: rgb(21,140,186);
+	font-weight:700;
+	text-decoration: underline;
+}
+#what-we-do .card .card-block a i{
+	display:none;	
+}
+#what-we-do .card:hover .card-block a i{
+	display:inline-block;
+	font-weight:700;
+	margin-left: .5rem;
+}
+#what-we-do .card .card-block:before{
+	font-family: FontAwesome;
+    position: absolute;
+    font-size: 39px;
+	color: rgb(21,140,186);
+    left: 0;
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+    transition:transform .2s ease-in-out;
+}
+
+#what-we-do .card .vest:before{
+    content: "\f0a1";
+}
+#what-we-do .card .obavestenje:before{
+    content: "\f05a";
+}
+#what-we-do .card .default:before{
+    content: "\f0f3";
+}
+#what-we-do .card .uncategorised:before{
+    content: "\f059";
+}
+
+#what-we-do .card:hover .card-block:before{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);	
+	-webkit-transition: .8s all ease;
+	-moz-transition: .8s all ease;
+	transition: .8s all ease;
+}
+
+.card{
+	word-wrap: break-word;
+}
+
+.card-title{
+	margin-bottom: .2rem;
+}
+
+.card-text{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* =================================	CARD	================================= */
+
+
+/* =================================  MEDIA QUERIES	================================= */
+
+@media (min-width: 767px) and (max-width: 1000px){
+	.center{
+		float: left !important;
+	}
+
+	ul.navbar-right{
+		margin-left: -1.5rem !important;
+	}
+}
+
+@media(max-width: 767px){
+	.btn{
+		width: 100% !important;
+	}
+
+	.navbar-form{
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.disabled-search:hover{
+		margin-bottom: 3rem;
+	}
+}
+
+@media(min-width: 768px){
+	#dropdown-menu-rewrite {
+		left: 0;
+		right: auto;
+	}
+}
+
+
+@media (max-width: 575px){
+	.dropdown-submenu .dropdown-menu {
+    top: 25px;
+    left: 10%;
+    margin-top: -1px;
+	}
+
+	#what-we-do .card .card-block:before{
+		font-size: 2.5rem;
+	}
+
+	#what-we-do .card .card-block{
+		padding-left: 3.2rem;
+	}
+}
+
+
+@media (max-width: 385px){
+	.navbar-brand{
+		font-size: 15px;
+	}
+
+	.dropdown-submenu .dropdown-menu {
+    top: 25px;
+    left: 10%;
+    margin-top: -1px;
+	}
+
+	#what-we-do .card .card-block:before{
+		font-size: 2rem;
+	}
+
+	#what-we-do .card .card-block{
+		padding-left: 2.8rem;
+	}
+}
+
+
+@media (max-width: 335px){
+	.navbar-brand{
+		font-size: 13px;
+	}
+
+	.dropdown-submenu .dropdown-menu {
+    top: 25px;
+    left: 10%;
+    margin-top: -1px;
+	}
+}
+
+/* =================================  MEDIA QUERIES	================================= */
+

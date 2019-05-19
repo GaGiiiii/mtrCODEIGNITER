@@ -217,15 +217,15 @@
               $error = array('error' => $this->upload->display_errors());
               print_r($error);
               $post_file = "";
-              exit("3");
+              //exit("3");
             }else{
               $data = array('upload_data' => $this->upload->data());
               if($_FILES['userfile']['name'] == ''){
                 $post_file = $data['post']['post_file'];
-                exit("1");
+                //exit("1");
               }else{
                 $post_file = $_FILES['userfile']['name'];
-                exit("2");
+                //exit("2");
               }
               // print_r($this->upload->data());
             }

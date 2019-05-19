@@ -85,9 +85,9 @@
 
 
 
-			// 4 klp prima ovaj $name parametar kroz url
+			// ??????????????? 4 klip izgleda da prima ovaj $name parametar kroz url ???
 			// ovaj name dolazi iz treceg dela url-a
-			// ono sto je u routes (:any) i $1 je taj $name
+			// ono sto je u routes (:any) i $1 je izgleda taj $name
 			// 24:07
 
 			if($name == 'uncategorised'){

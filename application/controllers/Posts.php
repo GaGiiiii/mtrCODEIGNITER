@@ -30,6 +30,8 @@
 
 		public function view($slug = NULL){
 
+      $slug = urldecode($slug);
+
 			$this->post_model->show_edited_posts_test();
 			$this->post_model->delete_all_test_posts();
 			$this->post_model->retrieve_test_deleted_posts();
@@ -156,6 +158,8 @@
 
 		public function edit($slug){
 
+      $slug = urldecode($slug);
+
 			$this->category_model->retrieve_test_deleted_categories();
 			$this->category_model->delete_all_test_categories();
 
@@ -181,14 +185,16 @@
 
 			$slug = $this->input->post('slug');
 
-			$data['post'] = $this->post_model->get_posts($slug);
+      $data['post'] = $this->post_model->get_posts($slug);
 			$data['title'] = "Azuriraj Vest";
 			$data['categories'] = $this->post_model->get_categories();
 
 			$this->form_validation->set_error_delimiters('<div class="error-input"><i class="fa fa-times-circle"></i>&nbsp;', '</div>');
 
 			$this->form_validation->set_rules('title', "Title", 'trim|required|htmlspecialchars', array('required' => "Potrebno je uneti naslov."));
-			$this->form_validation->set_rules('body', "Body", 'trim|required', array('required' => 'Potrebno je uneti sadrzaj.'));
+      $this->form_validation->set_rules('body', "Body", 'trim|required', array('required' => 'Potrebno je uneti sadrzaj.'));
+      
+      
 
 			if($this->session->userdata('logged_in')){
 
@@ -204,16 +210,29 @@
 					$config['allowed_types'] = "pdf";
 					$config['max_size'] = "2048";
 
-					$this->load->library('upload', $config);
+          $this->load->library('upload', $config);
+          
+          if ($_FILES AND $_FILES['userfile']['name']){
+            if(!$this->upload->do_upload()){
+              $error = array('error' => $this->upload->display_errors());
+              print_r($error);
+              $post_file = "";
+              exit("3");
+            }else{
+              $data = array('upload_data' => $this->upload->data());
+              if($_FILES['userfile']['name'] == ''){
+                $post_file = $data['post']['post_file'];
+                exit("1");
+              }else{
+                $post_file = $_FILES['userfile']['name'];
+                exit("2");
+              }
+              // print_r($this->upload->data());
+            }
+          }else{
+            $post_file = $data['post']['post_file'];
+          }
 
-					if(!$this->upload->do_upload()){
-						$error = array('error' => $this->upload->display_errors());
-						$post_file = "";
-					}else{
-						$data = array('upload_data' => $this->upload->data());
-						$post_file = $_FILES['userfile']['name'];
-						// print_r($this->upload->data());
-					}
 					$this->post_model->update_post($post_file);
 
 					$this->session->set_flashdata('post_updated', 'Uspesno ste azurirali post.');
@@ -236,14 +255,27 @@
 
 					$this->load->library('upload', $config);
 
-					if(!$this->upload->do_upload()){
-						$error = array('error' => $this->upload->display_errors());
-						$post_file = "";
-					}else{
-						$data = array('upload_data' => $this->upload->data());
-						$post_file = $_FILES['userfile']['name'];
-						// print_r($this->upload->data());
-					}
+					if ($_FILES AND $_FILES['userfile']['name']){
+            if(!$this->upload->do_upload()){
+              $error = array('error' => $this->upload->display_errors());
+              print_r($error);
+              $post_file = "";
+              exit("3");
+            }else{
+              $data = array('upload_data' => $this->upload->data());
+              if($_FILES['userfile']['name'] == ''){
+                $post_file = $data['post']['post_file'];
+                exit("1");
+              }else{
+                $post_file = $_FILES['userfile']['name'];
+                exit("2");
+              }
+              // print_r($this->upload->data());
+            }
+          }else{
+            $post_file = $data['post']['post_file'];
+          }
+          
 					$this->post_model->update_post_test($post_file);
 
 					$this->session->set_flashdata('post_updated_test', 'Uspesno ste azurirali post.<br><strong>NAPOMENA: </strong> Ovo je test verzija i post ce biti automatski vracen na staro nakon 30 sekundi, da bi post ostao azuriran morate biti ulogovani kao Admin.');

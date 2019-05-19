@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'shareddb-h.hosting.stackcp.net',
-	'username' => 'menadzmenttr-3331d92a',
-	'password' => 'gagi123...0',
-	'database' => 'menadzmenttr-3331d92a',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'mtr',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

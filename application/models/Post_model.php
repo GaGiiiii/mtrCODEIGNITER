@@ -10,6 +10,8 @@
 
 		public function get_posts($slug = FALSE){
 
+     // $slug = urldecode($slug);
+
 			// SLUG JE SAMO AKO UZIMAMO JEDAN POST 
 
 			if($slug === false){
@@ -41,6 +43,8 @@
 		}
 
 		public function get_posts_per_page($slug = FALSE, $limit = FALSE, $offset = FALSE){
+
+     // $slug = urldecode($slug);
 
 			if($limit){
 				$this->db->limit($limit, $offset);

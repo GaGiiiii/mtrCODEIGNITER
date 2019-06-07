@@ -83,7 +83,7 @@
 			$this->category_model->delete_all_test_categories();
 			$this->category_model->retrieve_test_deleted_categories();
 
-
+      $name = urldecode($name);
 
 			// ??????????????? 4 klip izgleda da prima ovaj $name parametar kroz url ???
 			// ovaj name dolazi iz treceg dela url-a

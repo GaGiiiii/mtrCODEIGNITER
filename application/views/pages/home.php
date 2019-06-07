@@ -55,7 +55,7 @@
                   $category = "Vest";
                 }else if($post['category_id'] == 2){
                   $class = "obavestenje";
-                  $category = "Obavestenje";
+                  $category = "Obaveštenje";
                 }else if($post['category_id'] == 0 || $deleted){
                   $class = 'uncategorised';
                   $category = "Uncategorised";

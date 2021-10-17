@@ -48,7 +48,7 @@
                 $sql ="SELECT deleted FROM categories WHERE id = $category_id";
                 $query = $this->db->query($sql);
                 $category = $query->row_array();
-                $deleted = $category['deleted'];
+                $deleted = $category['deleted'] ?? 0;
 
                 if($post['category_id'] == 1){
                   $class = 'vest';

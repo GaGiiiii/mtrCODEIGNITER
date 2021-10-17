@@ -15,7 +15,8 @@
       <!-- <form class="form-horizontal new-post-form" action="<?php //echo base_url(); ?>vesti/napravi" method="post"> -->
         <?php echo form_open('login', 'class="new-post-form form-horizontal"'); ?>
         <?php if($this->session->flashdata('login_failed')) : ?>
-          <?php echo '<p class="alert alert-danger" id="login_failed">' . $this->session->flashdata('login_failed') . '</p>'; ?>
+          <?php echo '<p class="alert alert-danger alert-dismissible" id="login_failed">' . $this->session->flashdata('login_failed') . '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>'; ?>
+          <?php unset($_SESSION['login_failed']); ?>
         <?php endif; ?>
         <h2>Uloguj se</h2>
         <fieldset>

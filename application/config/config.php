@@ -25,7 +25,7 @@ date_default_timezone_set("Europe/Belgrade");
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/mtr';
+$config['base_url'] = $_SERVER['SERVER_NAME'] == "localhost" ? 'https://localhost/mtr' : 'mtr-ci.herokuapp.com';
 
 /*
 |--------------------------------------------------------------------------
